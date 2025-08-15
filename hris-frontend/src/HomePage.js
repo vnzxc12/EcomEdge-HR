@@ -5,7 +5,6 @@ import axios from "axios";
 import { AuthContext } from "./AuthContext";
 
 const API_URL = process.env.REACT_APP_API_URL;
-
 const defaultProfile = "https://www.w3schools.com/howto/img_avatar.png";
 
 const HomePage = () => {
@@ -56,6 +55,7 @@ const HomePage = () => {
 
       {/* Main Content */}
       <div className="flex-1 p-6 md:p-10">
+        {/* Greeting & Profile */}
         <div className="bg-white shadow-lg rounded-xl p-6 flex flex-col md:flex-row items-center gap-6">
           <img
             src={profilePhoto}
@@ -63,30 +63,29 @@ const HomePage = () => {
             className="w-48 h-48 rounded-full border-4 border-[#2563EB] object-cover"
           />
 
-         <div className="text-center md:text-left">
-  <h1 className="text-4xl font-bold text-gray-800 mb-2">
-    Hello, {employee?.first_name || "User"}!
-  </h1>
-  <p className="text-lg text-gray-700">
-    Welcome to the HRIS Dashboard. Here's your summary.
-  </p>
-  <p className="text-md text-gray-500 mt-3">
-    {currentTime.toLocaleDateString("en-US", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    })}{" "}
-    • {currentTime.toLocaleTimeString("en-US")}
-  </p>
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl font-bold text-gray-800 mb-2">
+              Hello, {employee?.first_name || "User"}!
+            </h1>
+            <p className="text-lg text-gray-700">
+              Welcome to the HRIS Dashboard. Here's your summary.
+            </p>
+            <p className="text-md text-gray-500 mt-3">
+              {currentTime.toLocaleDateString("en-US", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}{" "}
+              • {currentTime.toLocaleTimeString("en-US")}
+            </p>
 
-  {isWorkAnniversary() && (
-    <p className="mt-4 text-green-600 font-semibold text-lg">
-      🎉 Happy Work Anniversary! Hired on {formatDate(employee.date_hired)}
-    </p>
-  )}
-</div>
-
+            {isWorkAnniversary() && (
+              <p className="mt-4 text-green-600 font-semibold text-lg">
+                🎉 Happy Work Anniversary! Hired on {formatDate(employee.date_hired)}
+              </p>
+            )}
+          </div>
         </div>
 
         {/* Summary Cards */}
@@ -103,6 +102,19 @@ const HomePage = () => {
             <h2 className="text-lg font-semibold">Designation</h2>
             <p className="text-2xl font-bold">{employee?.designation || "N/A"}</p>
           </div>
+        </div>
+
+        {/* Embedded Wix Website */}
+        <div className="mt-10 bg-white shadow-lg rounded-xl overflow-hidden w-full">
+          <iframe
+            src="https://kayzelsantos12.wixsite.com/ecomedge"
+            title="EcomEdge Website"
+            style={{
+              width: "100%",
+              height: "1000px", // Tall for better viewing
+              border: "none",
+            }}
+          />
         </div>
       </div>
     </div>
