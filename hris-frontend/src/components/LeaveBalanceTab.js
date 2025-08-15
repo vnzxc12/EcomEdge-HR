@@ -104,7 +104,7 @@ return (
         <button
           onClick={handleSave}
           disabled={saving}
-          className="mt-4 px-4 py-2 bg-[#6a8932] text-white rounded hover:bg-[#5a752a] disabled:opacity-50"
+          className="mt-4 px-4 py-2 bg-[#2563EB] text-white rounded hover:bg-[#5a752a] disabled:opacity-50"
         >
           {saving ? "Saving..." : "Save Changes"}
         </button>

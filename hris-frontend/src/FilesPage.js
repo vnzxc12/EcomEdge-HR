@@ -82,7 +82,7 @@ const FilesPage = () => {
       <Sidebar />
       <div className="flex-1 p-6 overflow-auto ml-64">
         <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <h1 className="text-3xl font-bold mb-6 text-[#6a8932]">Global Files</h1>
+          <h1 className="text-3xl font-bold mb-6 text-[#2563EB]">Global Files</h1>
 
           {/* Admin / Superadmin Upload Section */}
           {canManage && (
@@ -94,7 +94,7 @@ const FilesPage = () => {
               />
               <button
                 type="submit"
-                className="px-4 py-2 rounded bg-[#6a8932] text-white font-medium hover:bg-[#577025]"
+                className="px-4 py-2 rounded bg-[#2563EB] text-white font-medium hover:bg-[#577025]"
               >
                 Upload
               </button>
@@ -126,7 +126,7 @@ const FilesPage = () => {
     href={file.file_url}
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-1 px-3 py-2 rounded border font-medium shadow text-[#6a8932] border-[#6a8932] bg-white hover:bg-[#6a8932] hover:text-white transition-colors"
+    className="flex items-center gap-1 px-3 py-2 rounded border font-medium shadow text-[#2563EB] border-[#2563EB] bg-white hover:bg-[#2563EB] hover:text-white transition-colors"
   >
     <ExternalLink className="w-4 h-4" />
     Open
@@ -136,7 +136,7 @@ const FilesPage = () => {
   {canManage && (
     <button
       onClick={() => handleDelete(file.id)}
-      className="flex items-center gap-1 px-3 py-2 rounded border font-medium shadow text-[#6a8932] border-[#6a8932] bg-white hover:bg-[#6a8932] hover:text-white transition-colors"
+      className="flex items-center gap-1 px-3 py-2 rounded border font-medium shadow text-[#2563EB] border-[#2563EB] bg-white hover:bg-[#2563EB] hover:text-white transition-colors"
     >
       <Trash2 className="w-4 h-4" />
       Delete

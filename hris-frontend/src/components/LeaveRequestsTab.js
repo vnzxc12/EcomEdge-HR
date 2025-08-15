@@ -95,7 +95,7 @@ const LeaveRequestsTab = ({ employeeId: propEmployeeId, user }) => {
             </select>
             <input type="date" value={fromDate} onChange={(e) => setFromDate(e.target.value)} className="border p-2 rounded" required />
             <input type="date" value={toDate} onChange={(e) => setToDate(e.target.value)} className="border p-2 rounded" required />
-            <button type="submit" className="bg-[#6a8932] text-white px-4 py-2 rounded hover:bg-[#577025]">Submit</button>
+            <button type="submit" className="bg-[#2563EB] text-white px-4 py-2 rounded hover:bg-[#577025]">Submit</button>
           </form>
         )}
 

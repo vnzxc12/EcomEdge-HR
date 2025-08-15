@@ -72,13 +72,13 @@ const AdminLeaveRequestsPage = ({ user }) => {
 
       <main className="flex-1 flex justify-center items-start p-8">
         <div className="w-full max-w-5xl bg-white shadow-xl rounded-xl p-8">
-          <h1 className="text-3xl font-bold mb-6 text-[#6a8932] text-center">
+          <h1 className="text-3xl font-bold mb-6 text-[#2563EB] text-center">
             Leave Requests
           </h1>
 
           <div className="overflow-x-auto">
             <table className="min-w-full text-sm text-left border">
-              <thead className="bg-[#6a8932] text-white">
+              <thead className="bg-[#2563EB] text-white">
                 <tr>
                   <th className="p-3">Employee Name</th>
                   <th className="p-3">Leave Type</th>

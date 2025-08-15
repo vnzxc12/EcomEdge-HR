@@ -60,7 +60,7 @@ const HomePage = () => {
           <img
             src={profilePhoto}
             alt="Profile"
-            className="w-48 h-48 rounded-full border-4 border-[#6a8932] object-cover"
+            className="w-48 h-48 rounded-full border-4 border-[#2563EB] object-cover"
           />
 
          <div className="text-center md:text-left">

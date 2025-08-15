@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { AuthContext } from "./AuthContext"; 
 
 // ... constants
-const sidebarGreen = "#6a8932";
+const sidebarGreen = "#2563EB";
 const fern = "#5DBB63";
 const BASE_URL = "https://hris-backend-j9jw.onrender.com";
 
@@ -173,7 +173,7 @@ const { user } = useContext(AuthContext);
     {user?.role !== "employee" && (
   <button
     onClick={() => setShowModal(true)}
-    className="px-4 py-2 rounded border font-medium shadow text-[#6a8932] border-[#6a8932] bg-white hover:bg-[#6a8932] hover:text-white transition-colors"
+    className="px-4 py-2 rounded border font-medium shadow text-[#2563EB] border-[#2563EB] bg-white hover:bg-[#2563EB] hover:text-white transition-colors"
   >
     + Add Employee
   </button>
@@ -183,7 +183,7 @@ const { user } = useContext(AuthContext);
 
             {/* START DIRECTORY CONTAINER */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow space-y-4">
-              <h1 className="text-3xl font-bold mb-6 text-[#6a8932]">DIRECTORY</h1>
+              <h1 className="text-3xl font-bold mb-6 text-[#2563EB]">DIRECTORY</h1>
 
               {paginatedEmployees.map((emp) => (
                 <div
@@ -255,7 +255,7 @@ const { user } = useContext(AuthContext);
                   key={i + 1}
                   onClick={() => setCurrentPage(i + 1)}
                   className={`px-3 py-1 rounded border text-sm ${
-                    currentPage === i + 1 ? "bg-[#6a8932] text-white" : "bg-white hover:bg-gray-200"
+                    currentPage === i + 1 ? "bg-[#2563EB] text-white" : "bg-white hover:bg-gray-200"
                   }`}
                 >
                   {i + 1}

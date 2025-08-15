@@ -179,7 +179,7 @@ const AssetsTab = ({ employee, user }) => {
 
           <button
             type="submit"
-            className="bg-[#6a8932] text-white px-4 py-2 rounded"
+            className="bg-[#2563EB] text-white px-4 py-2 rounded"
           >
             Add Asset
           </button>

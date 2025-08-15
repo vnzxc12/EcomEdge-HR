@@ -108,7 +108,7 @@ const savePayroll = async () => {
       <Sidebar />
       <main className="ml-64 p-8 flex justify-center items-start w-full">
         <div className="w-full max-w-7xl bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold mb-6 text-[#6a8932] text-center">
+          <h1 className="text-3xl font-bold mb-6 text-[#2563EB] text-center">
             Payroll
           </h1>
 
@@ -117,17 +117,17 @@ const savePayroll = async () => {
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="border border-[#6a8932] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6a8932]"
+              className="border border-[#2563EB] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563EB]"
             />
             <input
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
-              className="border border-[#6a8932] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#6a8932]"
+              className="border border-[#2563EB] rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#2563EB]"
             />
             <button
               onClick={calculatePayroll}
-              className="px-4 py-2 rounded border font-medium shadow text-[#6a8932] border-[#6a8932] bg-white hover:bg-[#6a8932] hover:text-white transition-colors"
+              className="px-4 py-2 rounded border font-medium shadow text-[#2563EB] border-[#2563EB] bg-white hover:bg-[#2563EB] hover:text-white transition-colors"
             >
               Generate Payroll
             </button>
@@ -146,47 +146,47 @@ const savePayroll = async () => {
 
                 <button
                   onClick={downloadPDF}
-                  className="px-4 py-2 bg-[#6a8932] text-white rounded shadow hover:bg-[#5b762b]"
+                  className="px-4 py-2 bg-[#2563EB] text-white rounded shadow hover:bg-[#5b762b]"
                 >
                   Download PDF
                 </button>
               </div>
 
               <div className="overflow-auto max-w-full">
-                <table className="table-auto w-full border-collapse border border-[#6a8932] text-[#355d17] text-sm">
+                <table className="table-auto w-full border-collapse border border-[#2563EB] text-[#355d17] text-sm">
                   <thead className="bg-[#dbe9d6]">
                     <tr>
-                  <th className="border border-[#6a8932] px-4 py-2 text-left">Employee ID</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-left">Employee</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Total Hours</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Overtime Hours</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Regular Pay</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Overtime Pay</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">SSS</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Pag-IBIG</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">PhilHealth</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Tax</th>
-                      <th className="border border-[#6a8932] px-4 py-2">Reimbursement Details</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right">Reimbursement Amount</th>
-                      <th className="border border-[#6a8932] px-4 py-2 text-right font-semibold">Total Pay</th>
+                  <th className="border border-[#2563EB] px-4 py-2 text-left">Employee ID</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-left">Employee</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Total Hours</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Overtime Hours</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Regular Pay</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Overtime Pay</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">SSS</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Pag-IBIG</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">PhilHealth</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Tax</th>
+                      <th className="border border-[#2563EB] px-4 py-2">Reimbursement Details</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right">Reimbursement Amount</th>
+                      <th className="border border-[#2563EB] px-4 py-2 text-right font-semibold">Total Pay</th>
                     </tr>
                   </thead>
                   <tbody>
                     {payrollData.map((p) => (
                       <tr key={p.employee_id} className="even:bg-[#f0f6e6]">
-                        <td className="border border-[#6a8932] px-4 py-2">{p.employee_id}</td>
-                        <td className="border border-[#6a8932] px-4 py-2">{p.name}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{parseFloat(p.totalHours).toFixed(2)}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{parseFloat(p.overtimeHours).toFixed(2)}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{parseFloat(p.basePay).toFixed(2)}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{parseFloat(p.overtimePay).toFixed(2)}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{p.sss_amount ? parseFloat(p.sss_amount).toFixed(2) : "0.00"}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{p.pagibig_amount ? parseFloat(p.pagibig_amount).toFixed(2) : "0.00"}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{p.philhealth_amount ? parseFloat(p.philhealth_amount).toFixed(2) : "0.00"}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{p.tax_amount ? parseFloat(p.tax_amount).toFixed(2) : "0.00"}</td>
-                        <td className="border border-[#6a8932] px-4 py-2">{p.reimbursement_details || ""}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right">{p.reimbursement_amount ? parseFloat(p.reimbursement_amount).toFixed(2) : "0.00"}</td>
-                        <td className="border border-[#6a8932] px-4 py-2 text-right font-semibold">{parseFloat(p.totalPay).toFixed(2)}</td>
+                        <td className="border border-[#2563EB] px-4 py-2">{p.employee_id}</td>
+                        <td className="border border-[#2563EB] px-4 py-2">{p.name}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{parseFloat(p.totalHours).toFixed(2)}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{parseFloat(p.overtimeHours).toFixed(2)}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{parseFloat(p.basePay).toFixed(2)}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{parseFloat(p.overtimePay).toFixed(2)}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{p.sss_amount ? parseFloat(p.sss_amount).toFixed(2) : "0.00"}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{p.pagibig_amount ? parseFloat(p.pagibig_amount).toFixed(2) : "0.00"}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{p.philhealth_amount ? parseFloat(p.philhealth_amount).toFixed(2) : "0.00"}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{p.tax_amount ? parseFloat(p.tax_amount).toFixed(2) : "0.00"}</td>
+                        <td className="border border-[#2563EB] px-4 py-2">{p.reimbursement_details || ""}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right">{p.reimbursement_amount ? parseFloat(p.reimbursement_amount).toFixed(2) : "0.00"}</td>
+                        <td className="border border-[#2563EB] px-4 py-2 text-right font-semibold">{parseFloat(p.totalPay).toFixed(2)}</td>
                       </tr>
                     ))}
                   </tbody>

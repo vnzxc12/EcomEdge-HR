@@ -66,7 +66,8 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="w-64 h-screen bg-gradient-to-b from-[#7ec850] to-[#2f80c4] text-white fixed top-0 left-0 z-50 shadow-md flex flex-col justify-between">
+    <aside className="w-64 h-screen bg-gradient-to-b from-[#2563EB] to-[#1E40AF] text-white fixed top-0 left-0 z-50 shadow-md flex flex-col justify-between">
+
 
 
       <div>
@@ -84,7 +85,7 @@ const Sidebar = () => {
                 to={path}
                 className={`flex items-center gap-3 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150
                   ${isActive
-                    ? 'bg-white text-[#5DBB63]'
+                    ? 'bg-white text-[#2563EB]'
                     : 'hover:bg-white/20 text-white'}`}
               >
                 {icon}

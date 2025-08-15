@@ -200,7 +200,7 @@ const handleDeleteDocument = async (docId) => {
         </select>
         <button
           onClick={handleUpload}
-             className="bg-[#6a8932] text-white px-4 py-2 rounded"
+             className="bg-[#2563EB] text-white px-4 py-2 rounded"
         >
           Upload
         </button>
@@ -248,7 +248,7 @@ const handleDeleteDocument = async (docId) => {
       <div className="flex-1 p-8 ml-64">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold mb-6 text-[#6a8932]">Employee Profile</h1>
+          <h1 className="text-3xl font-bold mb-6 text-[#2563EB]">Employee Profile</h1>
           {(user?.role === "admin" || Number(user?.employee_id) === Number(employee.id))
  && (
   <div className="space-x-4">
@@ -312,7 +312,7 @@ const handleDeleteDocument = async (docId) => {
         />
         <button
           onClick={() => document.getElementById("photo-upload").click()}
-          className="absolute bottom-2 right-2 bg-[#6a8932] text-white p-2 rounded-full shadow hover:bg-[#5a752a] transition"
+          className="absolute bottom-2 right-2 bg-[#2563EB] text-white p-2 rounded-full shadow hover:bg-[#5a752a] transition"
           title="Change photo"
         >
           <Camera className="w-5 h-5" />
@@ -451,7 +451,7 @@ const handleDeleteDocument = async (docId) => {
           />
           <button
             type="submit"
-            className="bg-[#6a8932] text-white px-4 py-2 rounded"
+            className="bg-[#2563EB] text-white px-4 py-2 rounded"
           >
             Add Training
           </button>

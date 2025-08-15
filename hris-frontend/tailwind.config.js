@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        fern: '#5DBB63',       // Custom green
-        olivegreen: '#6a8932', // Used in Personal Details tab
+        fern: '#2563EB',       // Custom green
+        olivegreen: '#2563EB', // Used in Personal Details tab
         charcoal: '#36454F',   // Deep gray
         skyblue: '#87CEEB',    // Light blue for accents
         softgray: '#f5f5f5',   // Light background
