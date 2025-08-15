@@ -13,7 +13,7 @@ import { AuthContext } from "./AuthContext";
 // ... constants
 const sidebarGreen = "#2563EB";
 const fern = "#5DBB63";
-const BASE_URL = "https://hris-backend-j9jw.onrender.com";
+const BASE_URL = "https://ecomedge-hr.onrender.com";
 
 function Dashboard() {
   const [employees, setEmployees] = useState([]);
